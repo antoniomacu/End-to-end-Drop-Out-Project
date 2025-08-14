@@ -30,7 +30,7 @@ The [dataset](https://www.mdpi.com/2306-5729/7/11/146) was compiled by Valentim 
 1. Clone this repository:
    ```bash
    git clone https://github.com/antoniomacu/End-to-end-Drop-Out-Project.git
-   cd Drop-Out-Project-v2
+   cd End-to-end-Drop-Out-Project
    ```
 
 2. Install required packages.
@@ -73,4 +73,6 @@ This project highlights the value of data-driven methods for identifying at-risk
 ---
 ## Contact
 
-For questions or suggestions, please contact [antoniomacu](https://github.com/antoniomacu).
+For questions or suggestions, please contact:
+- GitHub: [antoniomacu](https://github.com/antoniomacu)
+- LinkedIn: [Antonio Martín Acuña](https://www.linkedin.com/in/antonio-mart%C3%ADn-acu%C3%B1a-328793208/)
