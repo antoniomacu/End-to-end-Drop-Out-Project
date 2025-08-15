@@ -1,74 +1,104 @@
-# End-to-end Drop-Out Project
+# End-to-End Student Drop-Out Prediction Project
 
-## Introduction
+**Executive Summary:**  
+This project uses real student data and advanced machine learning to predict whether students will graduate, drop out, or remain enrolled. By combining thorough data exploration, robust modeling, and hyperparameter optimization, the resulting XGBoost pipeline achieves strong predictive performance and provides actionable insights for early intervention in higher education.
 
-Student performance is a key indicator for educational institutions to assess the quality of their services. With the increasing diversity of study programs and specialization levels, analyzing student outcomes has become essential for understanding trends among new generations and improving institutional strategies. This project leverages machine learning to classify and predict whether a student is likely to graduate, drop out, or remain enrolled, providing actionable insights for early intervention.
+---
 
-## Scope
+## **Project Overview**
 
 **Goal:**  
-The primary objective is to explore and understand the available data, apply machine learning algorithms for student outcome classification, and enhance predictive performance through model selection and optimization. The project specifically focuses on predicting the `Target` variable, categorizing students as 'Graduate', 'Dropout', or 'Enrolled'.
+Predict student outcomes—'Graduate', 'Dropout', or 'Enrolled'—using demographic, academic, and socioeconomic features.
 
-**Dataset:**  
-The [dataset](https://www.mdpi.com/2306-5729/7/11/146) was compiled by Valentim Realinho, Jorge Machado, Luís Baptista, and Mónica V. Martins from the Research Center for Endogenous Resource Valorization at the [Polytechnic Institute of Portalegre](https://www.ipportalegre.pt/pt/). It includes information on undergraduate students from various nationalities.
+**Why it matters:**  
+Early identification of at-risk students enables universities to deploy targeted support, reduce dropout rates, and improve educational outcomes.
 
-**Project Steps:**
-1. Setup and Feature Inspection
-2. Exploratory Data Analysis (EDA)
-3. Data Preparation
-4. Machine Learning Model Deployment
-5. Fine-tuning
-6. Evaluation and Conclusions
+**Your Role:**  
+All analysis, modeling, and reporting performed by [Antonio Martín Acuña](https://github.com/antoniomacu).
 
-### Prerequisites
+---
+
+## **Dataset**
+
+- Source: Valentim Realinho, Jorge Machado, Luís Baptista, Mónica V. Martins (Research Center for Endogenous Resource Valorization, Polytechnic Institute of Portalegre)
+- Undergraduate student records with demographic, academic, and economic variables.
+
+---
+
+## **Project Steps**
+
+1. **Setup and Feature Inspection**
+2. **Exploratory Data Analysis (EDA)**
+3. **Data Preparation & Preprocessing**
+4. **Model Training & Evaluation**
+5. **Hyperparameter Tuning** (RandomSearch, GridSearch, Optuna)
+6. **Error Analysis & Model Persistence**
+
+---
+
+## **Key Results**
+
+- **Best Model:** XGBoost Pipeline (after SMOTE and optimization)
+- **Performance:**
+  - Training F1-score: **82.9%**
+  - Test F1-score: **70.4%**
+  - Highest accuracy for 'Graduate' and 'Dropout'
+  - 'Enrolled' remains challenging due to class imbalance (see notebook for error analysis)
+- **Business Value:**  
+  Enables early warning for student support teams to proactively address potential dropouts.
+
+- **Sample Visualizations:**  
+  _See notebook for:_
+    - Confusion matrix (test set)
+    - Feature importance
+    - ROC-AUC curves
+    - Error profiles
+
+---
+
+## **Reproducibility**
 
 - Python 3.8+
-- Main libraries: pandas, numpy, scikit-learn, xgboost, matplotlib, seaborn, joblib, etc.
-
-### Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/antoniomacu/End-to-end-Drop-Out-Project.git
-   cd End-to-end-Drop-Out-Project
-   ```
-
-2. Install required packages.
-
-### Running the Project
-
-Open and run the cells in `Dropout Project.ipynb` to follow the analysis step by step. All code and plots are in the notebook.
+- Main libraries: `pandas`, `numpy`, `scikit-learn`, `xgboost`, `matplotlib`, `seaborn`, `joblib`, `optuna`, `imblearn`
+- All code in the notebook is modular, with random seeds set for reproducibility.
+- Final model is saved as `best_model.joblib` for easy deployment.
 
 ---
 
-## Results
+## **Getting Started**
 
-- The final model is an **XGBoost pipeline**, selected after thorough comparison and optimization.
-- **Performance:**
-  - **Training F1-score:** 82.9%
-  - **Test F1-score:** 70.4%
-- The model performs strongly for the 'Graduate' and 'Dropout' classes.
-- The 'Enrolled' class remains challenging due to class imbalance, even after mitigation attempts.
-- Error analysis shows most misclassifications are in the 'Enrolled' class.
+```bash
+git clone https://github.com/antoniomacu/End-to-end-Drop-Out-Project.git
+cd End-to-end-Drop-Out-Project
+# Install requirements using pip or conda as needed
+```
 
----
-
-## Conclusion
-
-In this project, the [dataset](https://www.mdpi.com/2306-5729/7/11/146) from the Polytechnic Institute of Portalegre was deeply analyzed to develop and evaluate a machine learning model for predicting student outcomes: dropout, graduation, or continued enrollment.
-
-- Through preprocessing, feature selection, and model comparison, an **XGBoost pipeline** was chosen, delivering robust performance in classifying outcomes, particularly for 'Graduate' and 'Dropout'.
-- **Key metrics:** 82.9% F1-score on training, 70.4% on test data.
-- The primary challenge remains the accurate classification of 'Enrolled' students, linked to class imbalance, as revealed in both EDA and error analysis.
-- Future improvements could involve more advanced techniques for class balancing, enhanced feature engineering, or testing alternative algorithms.
-
-This project highlights the value of data-driven methods for identifying at-risk students, enabling educational institutions to implement timely interventions and improve learning outcomes.
+Open and run the notebook `Dropout Project.ipynb` to follow the entire workflow with code, plots, and commentary.
 
 ---
 
-## Acknowledgements
+## **Conclusion & Future Work**
 
-- [Dataset Source](https://www.mdpi.com/2306-5729/7/11/146): Valentim Realinho, Jorge Machado, Luís Baptista, Mónica V. Martins (Research Center for Endogenous Resource Valorization, Polytechnic Institute of Portalegre)
+- The XGBoost pipeline provides robust classification of student outcomes.
+- Primary challenge: Improving recall for the 'Enrolled' class.
+- **Future directions:**  
+  - Explore more advanced class balancing techniques
+  - Enhanced feature engineering
+  - Test additional algorithms or interpretability tools (e.g., SHAP)
+
+---
+
+## **Acknowledgements**
+
+- **Dataset Source:** Valentim Realinho, Jorge Machado, Luís Baptista, Mónica V. Martins (Research Center for Endogenous Resource Valorization, Polytechnic Institute of Portalegre)
+
+---
+
+## **Contact**
+
+- **GitHub:** [antoniomacu](https://github.com/antoniomacu)
+- **LinkedIn:** [Antonio Martín Acuña](https://www.linkedin.com/in/antonio-mart%C3%ADn-acu%C3%B1a/)
+- _Questions or suggestions welcome!_
 
 ---
 ## Contact
