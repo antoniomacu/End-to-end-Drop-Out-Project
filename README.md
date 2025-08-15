@@ -1,6 +1,6 @@
 # End-to-End Student Drop-Out Prediction Project
 
-**Executive Summary:**  
+**Summary:**  
 This project uses real student data and advanced machine learning to predict whether students will graduate, drop out, or remain enrolled. By combining thorough data exploration, robust modeling, and hyperparameter optimization, the resulting XGBoost pipeline achieves strong predictive performance and provides actionable insights for early intervention in higher education.
 
 ---
@@ -13,7 +13,7 @@ Predict student outcomes—'Graduate', 'Dropout', or 'Enrolled'—using demograp
 **Why it matters:**  
 Early identification of at-risk students enables universities to deploy targeted support, reduce dropout rates, and improve educational outcomes.
 
-**Your Role:**  
+**Author:**  
 All analysis, modeling, and reporting performed by [Antonio Martín Acuña](https://github.com/antoniomacu).
 
 ---
