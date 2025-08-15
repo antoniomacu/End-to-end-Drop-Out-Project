@@ -98,11 +98,6 @@ Open and run the notebook `Dropout Project.ipynb` to follow the entire workflow 
 
 - **GitHub:** [antoniomacu](https://github.com/antoniomacu)
 - **LinkedIn:** [Antonio Martín Acuña](https://www.linkedin.com/in/antonio-mart%C3%ADn-acu%C3%B1a/)
-- _Questions or suggestions welcome!_
+- _Questions or suggestions are welcomed!_
 
 ---
-## Contact
-
-For questions or suggestions, please contact:
-- GitHub: [antoniomacu](https://github.com/antoniomacu)
-- LinkedIn: [Antonio Martín Acuña](https://www.linkedin.com/in/antonio-mart%C3%ADn-acu%C3%B1a-328793208/)
